@@ -18,31 +18,49 @@ router.post('/delete-category/:id', categoryController.deleteCategory);
 /* GET checkouts listing. */
 
 router.get('/checkout', checkoutController.getAllCheckouts);
-router.post('/create-checkout', checkoutController.createCheckouts);
+router.post('/create-checkout', checkoutController.createCheckout);
++router.get('/find-checkout/:id', checkoutController.getCheckout);
+router.post('/update-checkout/:id', checkoutController.updateCheckout);
+router.post('/delete-checkout/:id', checkoutController.deleteCheckout);
 
 /* GET orders listing. */
 
 router.get('/order', orderController.getAllOrders);
-router.post('/create-order', orderController.createOrders);
+router.post('/create-order', orderController.createOrder);
+router.get('/find-order/:id', orderController.getOrder);
+router.post('/update-order/:id', orderController.updateOrder);
+router.post('/delete-order/:id', orderController.deleteOrder);
 
 /* GET products listing. */
 
 router.get('/product', productController.getAllProducts);
-router.post('/create-product', productController.createProducts);
+router.post('/create-product', productController.createProduct);
+router.get('/find-product/:id', productController.getProduct);
+router.post('/update-product/:id', productController.updateProduct);
+router.post('/delete-product/:id', productController.deleteProduct);
 
 /* GET roles listing. */
 
 router.get('/role', roleController.getAllRoles);
-router.post('/create-role', roleController.createRoles);
+router.post('/create-role', roleController.createRole);
+router.get('/find-role/:id', roleController.getRole);
+router.post('/update-role/:id', roleController.updateRole);
+router.post('/delete-role/:id', roleController.deleteRole);
 
 /* GET storages listing. */
 
 router.get('/storage', storageController.getAllStorages);
-router.post('/create-storage', storageController.createStorages);
+router.post('/create-storage', storageController.createStorage);
+router.get('/find-storage/:id', storageController.getStorage);
+router.post('/update-storage/:id', storageController.updateStorage);
+router.post('/delete-storage/:id', storageController.deleteRole);
 
 /* GET users listing. */
 
 router.get('/user', userController.getAllUsers);
-router.post('/create-user', userController.createUsers);
+router.post('/create-user', userController.createUser);
+router.get('/find-user/:id', userController.getUser);
+router.post('/update-user/:id', userController.updateUser);
+router.post('/delete-user/:id', userController.deleteUser);
 
 module.exports = router;
